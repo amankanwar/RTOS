@@ -20,3 +20,10 @@ int _write(int file, char *ptr, uint32_t len)
 	return len;
 }
 ------------------------------------------------
+
+Data Watchpoint Trigger
+
+#define DWT_CYCCNT ((volatile uint32_t *) 0xE0001000)
+*DWT_CYCCNT = *DWT_CYCCNT | (1 << 0);
+
+_SEGGER_RTT  in expression window
