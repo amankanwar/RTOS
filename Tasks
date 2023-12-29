@@ -1,0 +1,37 @@
+          Dec 29th 2023
+----------------------------------------------------------------------------------------------
+Create an RTOS application with following requirements
+Task 1 (Priority 1)
+      -> Toggle LED1 at 500 mS
+Task 1 (Priority 1)
+      -> Toggle LED1 at 1000 mS
+Task 1 (Priority 1)
+      -> Toggle LED1 at 1500 mS
+Task 1 (Priority 1)
+      -> Toggle LED1 at 2000 mS
+----------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
+Create an RTOS application with following requirements
+Task 1 (Priority 1)
+      -> Toggle LED1 at 500 mS
+Task 1 (Priority 2)
+      -> Toggle LED1 at 1000 mS
+Task 1 (Priority 3)
+      -> Toggle LED1 at 1500 mS
+Task 1 (Priority 4)
+      -> Toggle LED1 at 2000 mS
+----------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
+Create an RTOS application with following requirements
+Task 1 (Priority 1)
+      -> Toggle LED1 at 500 mS
+Task 1 (Priority 2)
+      -> Toggle LED1 at 1000 mS
+Task 1 (Priority 1)
+      -> Toggle LED1 at 1500 mS
+Task 1 (Priority 2)
+      -> Toggle LED1 at 2000 mS
+----------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
+
+Document the behaviour
