@@ -1,0 +1,22 @@
+
+----------------------------------------------
+          Add debug messages
+----------------------------------------------
+Print ITM debugs
+Any call made to printf will come to below API
+Enable following windows for Serial Wire
+
+Window -> Show View -> Others
+  SWV Data Trace TimeLine Graph
+  SWV ITM Data Console
+-----------------------------------------------
+#include "stdio.h"
+
+int _write(int file, char *ptr, uint32_t len)
+{
+	uint32_t index;
+	for (index = 0; index < len; index++)
+		ITM_SendChar((*ptr++));
+	return len;
+}
+------------------------------------------------
