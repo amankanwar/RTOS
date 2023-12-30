@@ -27,3 +27,29 @@ Data Watchpoint Trigger
 *DWT_CYCCNT = *DWT_CYCCNT | (1 << 0);
 
 _SEGGER_RTT  in expression window
+
+
+------------------------------------------------
+------------------------------------------------
+pvTaskCode  	Pointer to the task entry function (just the name of the function that implements the task, see the example below).
+Tasks are normally implemented as an infinite loop; the function which implements the task must never attempt to return or exit. Tasks can, however, delete themselves.
+
+pcName  	A descriptive name for the task. This is mainly used to facilitate debugging, but can also be used to obtain a task handle.
+The maximum length of a task's name is defined by configMAX_TASK_NAME_LEN in FreeRTOSConfig.h.
+
+usStackDepth  	The number of words (not bytes!) to allocate for use as the task's stack. For example, if the stack is 16-bits wide and usStackDepth is 100, then 200 bytes will be allocated for use as the task's stack. As another example, if the stack is 32-bits wide and usStackDepth is 400 then 1600 bytes will be allocated for use as the task's stack.
+The stack depth multiplied by the stack width must not exceed the maximum value that can be contained in a variable of type size_t.
+
+See the FAQ How big should the stack be?
+
+pvParameters  	A value that is passed as the paramater to the created task.
+If pvParameters is set to the address of a variable then the variable must still exist when the created task executes - so it is not valid to pass the address of a stack variable.
+
+uxPriority  	The priority at which the created task will execute.
+Systems that include MPU support can optionally create a task in a privileged (system) mode by setting the bit portPRIVILEGE_BIT in uxPriority. For example, to create a privileged task at priority 2 set uxPriority to ( 2 | portPRIVILEGE_BIT ).
+
+Priorities are asserted to be less than configMAX_PRIORITIES. If configASSERT is undefined, priorities are silently capped at (configMAX_PRIORITIES - 1).
+
+pxCreatedTask  	Used to pass a handle to the created task out of the xTaskCreate() function. pxCreatedTask is optional and can be set to NULL.
+------------------------------------------------
+------------------------------------------------
