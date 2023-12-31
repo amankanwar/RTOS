@@ -63,13 +63,27 @@ Question:
           
 
 Question:
-          Write following application (using TaskHandles)
-
-          Task1 -> LED 1 (Toggle at every 100 mS)
-          Task2 -> LED 2 (Toggle at every 3000 mS)
+          Write following application (using TaskHandles and parameters)
           Pass the handle of Task1 to Task2
-          
+
+          Task1 -> Toggle LED 1 ( at every 100 mS)
+
+          Task2 -> At every 3000 mS) 
+                -> Toggle LED 2 
+                -> Suspend Task1 and Resume Task1
           Make use of proper FreeRTOS APIs discussed so far to implement.
+          Document the behaviour!
+
+Question:
+          Write following application (using button interrupts)
+
+          Task1 -> Toggle LED 1 (at every 100 mS)
+          Task2 -> Toggle LED 2 (at every 500 mS)
+
+          Use button interrupt to toggle LED3 and LED4.
+          (Handle Debouncing properly)
+
+          Make use of proper FreeRTOS APIs discussed so far to implement. Document the behaviour!
 
 
 
