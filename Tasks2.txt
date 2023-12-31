@@ -1,0 +1,97 @@
+==================================================================================================
+Question:
+          Write following application
+          Use cooperative scheduling algorithm 
+
+          (No Delay Used)
+          Task1 (Priority 1)  -> Toggle LED 1
+                              -> Yeild CPU using yeild call
+
+          (No Delay Used)                
+          Task2 (Priority 1)  -> Toggle LED 2 
+                              -> Yeild CPU using yeild call
+
+          Observe the behaviour using the Segger System Viewer and document.
+
+--------------------------------------------------------------------------------
+Question:
+          Write following application 
+          Use preemptive scheduling algorithm 
+
+          (No Delay Used)
+          Task1 (Priority 1)  -> Toggle LED 1
+                              -> Yeild CPU using yeild call
+
+          (No Delay Used)                
+          Task2 (Priority 1)  -> Toggle LED 2 
+                              -> Yeild CPU using yeild call
+
+          Observe the behaviour using the Segger System Viewer and document.
+
+--------------------------------------------------------------------------------
+Question:
+          Write following application
+          Use preemptive scheduling algorithm 
+
+          (No Delay Used)
+          Task1 (Priority 1)  -> Toggle LED 1
+                              -> Yeild CPU using yeild call
+
+          (No Delay Used)                
+          Task2 (Priority 2)  -> Toggle LED 2 
+                              -> Yeild CPU using yeild call
+
+          Observe the behaviour using the Segger System Viewer and document.
+
+--------------------------------------------------------------------------------
+Question:
+          Write following application
+          Use preemptive scheduling algorithm 
+
+          (No Delay Used)
+          Task1 (Priority 1)  -> Toggle LED 1
+                              -> Yeild CPU using yeild call
+
+          (No Delay Used)                
+          Task2 (Priority 2)  -> Toggle LED 2 
+                              -> Yeild CPU using yeild call
+
+          Observe the behaviour using the Segger System Viewer and document.
+
+--------------------------------------------------------------------------------
+Question:
+          Write following application
+          Use preemptive scheduling algorithm 
+
+          Task1 (Priority 1)  -> Toggle LED 1 at 2 mS rate for 10 Times and then delete itself
+                              -> Yeild CPU using yeild call
+
+          Task2 (Priority 1)  -> Toggle LED 2 at 3 mS rate for 3 Times and then delete itself
+
+          Observe the behaviour using the Segger System Viewer and document.
+
+--------------------------------------------------------------------------------
+Question:
+          Write following application
+          Use preemptive scheduling algorithm 
+
+          Task1 (Priority 1)  -> Toggle LED 1 at 2 mS rate for 10 Times and then delete itself
+                              -> Yeild CPU using yeild call
+
+          Task2 (Priority 2)  -> Toggle LED 2 at 3 mS rate for 3 Times and then delete itself
+
+          Observe the behaviour using the Segger System Viewer and document.
+
+--------------------------------------------------------------------------------
+Question:
+          Write following application
+          Use preemptive scheduling algorithm 
+
+          Task1 (Priority 1)  -> Toggle LED 1 at 2 mS rate for 10 Times and then delete itself
+                              -> Yeild CPU using yeild call
+
+          Task2 (Priority 2)  -> Toggle LED 2 at 3 mS rate for 3 Times and then delete itself
+
+          use proper FreeRTOS APIs
+          Observe the behaviour using the Segger System Viewer and document.
+--------------------------------------------------------------------------------
