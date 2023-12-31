@@ -35,3 +35,51 @@ Task 1 (Priority 2)
 ----------------------------------------------------------------------------------------------
 
 Document the behaviour
+===============================================================================================
+                                        31/12/2023
+===============================================================================================
+
+Question:
+          Write following application
+
+          Pass a positive value from main() to Task1, Task2, Task3 and Task4 at the time of task creation, which
+          will determine the LED Toggling delay
+
+          Task A          -> LED 1
+          Task B          -> LED 2
+          Task C          -> LED 3
+          Task D          -> LED 4
+
+Question:
+          Write following application
+
+          Take user input to determine which task to run. You have two tasks controlling two
+          sets of LEDs.
+
+          Task x           -> LED 1, LED 2          If button is pressed initially then only Task x should run forever
+          Task y           -> LED 3, LED 4          If button is not pressed initially then only Task y should run forever
+
+          Make use of proper FreeRTOS APIs discussed so far to implement.
+          
+
+Question:
+          Write following application (using TaskHandles)
+
+          Task1 -> LED 1 (Toggle at every 100 mS)
+          Task2 -> LED 2 (Toggle at every 3000 mS)
+          Pass the handle of Task1 to Task2
+          
+          Make use of proper FreeRTOS APIs discussed so far to implement.
+
+
+
+
+
+
+
+
+
+
+
+
+
