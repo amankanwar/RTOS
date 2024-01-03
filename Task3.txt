@@ -1,0 +1,34 @@
+===============================================================
+                      Queue Management
+===============================================================
+Write the following RTOS application with following behaviour
+##################################################
+Task1
+  ------------------------------------------------
+  ->>> Getting invoked by button interrupts EXT0
+                        OR
+  ->>> Periodic execution at every250 mS.
+  ------------------------------------------------
+  ->>> Reads Data from sensor Accelerometer Sensor.
+        ---> Capture X-Axis data
+        ---> Capture Y-Axis data
+        ---> Capture Z-Axis data
+
+  ->>> Sends data to Task2 via Queue.
+##################################################
+
+##################################################
+Task2
+  ->>> Read the data sent by Task1 in Queue
+  ->>> Combine the received X-data, Y-data, Z-data
+  ->>> Make a single String as
+        "X-data: <value> Y-data: <value> Z-data: <value>"
+  ->>> Send the string to Task3 via Queue.
+##################################################
+
+##################################################
+Task3
+  ->>> Read the data sent by Task2 in Queue
+  ->>> Send the data to available free UART
+  ->>> Check the output on serial console 
+##################################################
