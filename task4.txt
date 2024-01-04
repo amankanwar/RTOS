@@ -1,0 +1,25 @@
+Use the Semaphores
+
+Create a semaphore being used between two tasks.
+--------------------------------------
+Scenario 1:
+Task1 Prio 1        Task2 Prio 1
+Scenario 2:
+Task1 Prio 2        Task2 Prio 1
+--------------------------------------
+Task1
+  -> TakeSemaphore()
+  -> Set LED 12 High & delay (100 mS).
+  -> Set LED 13 High & delay (100 mS).
+  -> Set LED 14 High & delay (100 mS).
+  -> Set LED 15 High & delay (100 mS).
+
+Task2
+  -> Reset LED 12 High & delay (100 mS).
+  -> Reset LED 13 High & delay (100 mS).
+  -> Reset LED 14 High & delay (100 mS).
+  -> Reset LED 15 High & delay (100 mS).
+  -> GiveSemaphore()
+=========================================
+
+Observe and document
