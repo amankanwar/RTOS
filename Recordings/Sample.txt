@@ -1,2 +1,34 @@
-Contains the data for the segger file system and the data that is writren there for the segger sustem viewer and to work on the data field that are importing on the data and the segger system view sofrware
-  
+volatile uint8_t val = 0;
+SemaphoreHandle_t mySem;
+void task1 (void *tmp)
+{
+	while (1) {
+		xSemaphoreTake(mySem, portMAX_DELAY);
+		if (val%3 == 0)
+			HAL_Delay(1);
+	}
+}
+
+
+// Middle prio task, initial block time of 2 mS
+void task2 (void *tmp)
+{
+	TickType_t lastWakeTime;
+	lastWakeTime = xTaskGetTickCount();
+	while (1) {
+		xSemaphoreGive(mySem);
+		vTaskDelay(pdMS_TO_TICKS(4));
+		//vTaskDelayUntil(&lastWakeTime, pdMS_TO_TICKS(4));
+		SEGGER_SYSVIEW_Print("Task Woken");
+		val++;
+	}
+}
+
+
+==========inside main
+
+  mySem = xSemaphoreCreateBinary();
+
+  //xTaskCreate(task1, "task1", 200, NULL, 2, NULL);
+  xTaskCreate(task1, "task1", 200, NULL, 2, NULL);
+  xTaskCreate(task2, "task2", 200, NULL, 1, NULL);
