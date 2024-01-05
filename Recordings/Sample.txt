@@ -1,0 +1,2 @@
+Contains the data for the segger file system and the data that is writren there for the segger sustem viewer and to work on the data field that are importing on the data and the segger system view sofrware
+  
